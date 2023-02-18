@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<meta charset=utf-8 />
+<title>Korean Test</title>
+<style>
+  #StartBtn{
+    padding: 10px;
+    border: none;
+    width: 100%;
+    background-color: #0065ad;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  #StartBtn:hover{
+    cursor: pointer;
+    background-color: #01548f;
+  }
+</style>
+</head>
+<body>
+  
+
+<div style="width:85%;border: 1px solid #0065ad;display: block;margin: auto;height: 70vh;">
+  <button onclick="displayImage();" type=button id="StartBtn">Start Korean Recognition Test</button>
+ 
+  <div style="margin-top:30px;">
+    <img name="canvas" style="display: block;margin: auto;width: 250px;height: auto;" />
+  </div>
+
+</div>
+<div style="text-align: center;margin-top: 4px;">
+  <p><small>By Zia ul Qamar</small></p>
+</div>
+  
+
+<script>
+var imagesArray = [];
+
+for (var i = 1;i <104 ; i++){
+  imagesArray.push('https://ziaulqamar72.github.io/KLT/Images/img ('+ i +').png');
+}
+console.log(imagesArray);
+
+function yourFunction(){
+    // do whatever you like here
+    setTimeout(displayImage,  2500);
+}
+
+function displayImage(){
+    var num = Math.floor(Math.random() * 7); // 0...6
+    document.canvas.src = imagesArray[num];
+    yourFunction();
+}
+
+</script>
+</body>
+</html>
